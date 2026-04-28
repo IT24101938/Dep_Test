@@ -16,8 +16,48 @@ router.post('/', async (req, res) => {
     // will work once you add price to the model
   });
 
-frontend/components/
+frontend/components/ItemForm.jsx
+const handleSubmit = async (e) => {
+    e.preventDefault();
 
+    await createItem({
+      name,
+      price: Number(price),
+      discountPercentage: Number(discountPercentage)
+  
+});
+
+    setName('');
+    setPrice('');
+    setDiscountPercentage('');
+
+    onItemAdded();
+  };
+
+<div>
+        <input
+          placeholder="Description"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+          required
+        />
+      </div>
+
+      <div>
+        <input
+          placeholder="Price"
+          type="number"
+          value={price}
+          onChange={(e) => setPrice(e.target.value)}
+          required
+        />
+      </div>
+
+frontend/components/ItemList.jsx
+          <h3>{item.name}</h3>
+          <p>{item.description}</p>
+          <p>Price: Rs.{item.price}</p>
+          <p>Discount: {item.discountPercentage}%</p>
 
 Github Commands
 echo "# aa" >> README.md
