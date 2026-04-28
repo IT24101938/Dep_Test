@@ -88,3 +88,8 @@ Start Command - node server.js
 Environment Variables
 MONGO_URI = mongodb+srv://lakindu:lakindu123@cluster1.o7igtj2.mongodb.net/?appName=Cluster1
 PORT = 5000
+
+frontend/api.js
+const API = axios.create({
+  baseURL: import.meta.env.VITE_API_URL || "https://dep-test-backend-ze2t.onrender.com/api",
+});
