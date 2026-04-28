@@ -59,6 +59,15 @@ PORT=5000
 backend/.env
 VITE_API_URL=http://localhost:5000/api
 
+package.json
+"scripts": {
+    "start": "node server.js",
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+
 Github Commands
 echo "# aa" >> README.md
 git init
