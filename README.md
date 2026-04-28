@@ -77,3 +77,14 @@ git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/IT24101938/Dep_Test.git
 git push -u origin main
+
+render
+Name - WMT_Lab
+setLanguage - Node 
+Branch - main
+Root Directory - backend 
+Build Command - npm install
+Start Command - node server.js 
+Environment Variables
+MONGO_URI = mongodb+srv://lakindu:lakindu123@cluster1.o7igtj2.mongodb.net/?appName=Cluster1
+PORT = 5000
