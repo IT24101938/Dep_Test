@@ -102,3 +102,11 @@ git push
 if error occur
 git pull origin main --rebase
 git push
+
+netlify
+Branch to deploy - main
+Base directory - frontend
+Build command - npm run build
+Publish directory - frontend/dist
+environment variables
+VITE_API_URL - https://dep-test-backend-ze2t.onrender.com/api
