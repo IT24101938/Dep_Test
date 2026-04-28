@@ -93,3 +93,8 @@ frontend/api.js
 const API = axios.create({
   baseURL: import.meta.env.VITE_API_URL || "https://dep-test-backend-ze2t.onrender.com/api",
 });
+
+Then push to GitHub
+git add .
+git commit -m "update API URL to production"
+git push
