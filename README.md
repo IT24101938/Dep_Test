@@ -1,3 +1,10 @@
+backend/.env
+MONGO_URI=mongodb+srv://lakindu:lakindu123@cluster1.o7igtj2.mongodb.net/?appName=Cluster1
+PORT=5000
+
+frontend/.env
+VITE_API_URL=http://localhost:5000/api
+
 backend/models
 const ItemSchema = new mongoose.Schema({
     name: { type: String, required: true },
@@ -52,12 +59,6 @@ frontend/components/ItemList.jsx
           <p>Price: Rs.{item.price}</p>
           <p>Discount: {item.discountPercentage}%</p>
 
-frontend/.env
-MONGO_URI=mongodb+srv://lakindu:lakindu123@cluster1.o7igtj2.mongodb.net/?appName=Cluster1
-PORT=5000
-
-backend/.env
-VITE_API_URL=http://localhost:5000/api
 
 package.json
 "scripts": {
