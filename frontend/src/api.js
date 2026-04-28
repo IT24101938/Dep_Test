@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || "https://dep-test-backend-ze2t.onrender.com/api",
+  baseURL: import.meta.env.VITE_API_URL || "https://dep-test-dge3.onrender.com",
 });
 
 export const getItems = () => API.get('/items');
