@@ -98,3 +98,7 @@ Then push to GitHub
 git add .
 git commit -m "update API URL to production"
 git push
+
+if error occur
+git pull origin main --rebase
+git push
