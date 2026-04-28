@@ -1,9 +1,7 @@
 backend/models
 const ItemSchema = new mongoose.Schema({
     name: { type: String, required: true },
-    price: {type: Number, required: true},
     discountPercentage: {type: Number, required: true}
-    
 }, { timestamps: true });
 
 backend/routes
@@ -11,10 +9,8 @@ backend/routes
 router.post('/', async (req, res) => {
   const item = new Item({
     name: req.body.name,
-    price: req.body.price,
     discountPercentage: req.body.discountPercentage
-    // will work once you add price to the model
-  });
+});
 
 frontend/components/ItemForm.jsx
 const handleSubmit = async (e) => {
@@ -22,19 +18,17 @@ const handleSubmit = async (e) => {
 
     await createItem({
       name,
-      price: Number(price),
-      discountPercentage: Number(discountPercentage)
+      discountPercentage: Number(discountPercentage),
   
 });
 
     setName('');
-    setPrice('');
     setDiscountPercentage('');
 
     onItemAdded();
   };
 
-<div>
+      <div>
         <input
           placeholder="Description"
           value={description}
@@ -55,9 +49,15 @@ const handleSubmit = async (e) => {
 
 frontend/components/ItemList.jsx
           <h3>{item.name}</h3>
-          <p>{item.description}</p>
           <p>Price: Rs.{item.price}</p>
           <p>Discount: {item.discountPercentage}%</p>
+
+frontend/.env
+MONGO_URI=mongodb+srv://lakindu:lakindu123@cluster1.o7igtj2.mongodb.net/?appName=Cluster1
+PORT=5000
+
+backend/.env
+VITE_API_URL=http://localhost:5000/api
 
 Github Commands
 echo "# aa" >> README.md
